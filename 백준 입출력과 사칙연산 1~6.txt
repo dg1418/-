@@ -1,0 +1,51 @@
+//1
+#include <stdio.h>
+int main(void){
+    printf("Hello World!");
+    return 0;
+}
+
+//2
+#include <stdio.h>
+int main(void){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    printf("%d",A+B);
+    return 0;
+}
+
+//3
+#include <stdio.h>
+int main(void){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    printf("%d",A-B);
+    return 0;
+}
+
+//4
+#include <stdio.h>
+int main(void){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    printf("%d",A*B);
+    return 0;
+}
+
+//5
+#include <stdio.h>
+int main(void){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    printf("%.9f",A/(double)B);
+    return 0;
+}
+
+//6
+#include <stdio.h>
+int main(void){
+    int A,B;
+    scanf("%d %d",&A,&B);
+    printf("%d %d %d %d %d",A+B,A-B,A*B,A/B,A%B);
+    return 0;
+}
