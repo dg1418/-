@@ -1,0 +1,63 @@
+//7
+#include <stdio.h>
+int main(void){
+    char name[50];
+    scanf("%s",name);
+    printf("%s?\?!",name);
+    return 0;
+}
+//8
+#include <stdio.h>
+int main(void){
+    int num;
+    scanf("%d",&num);
+    printf("%d",num-543);
+}
+//9
+#include <stdio.h>
+int main(void){
+    int A,B,C;
+    scanf("%d %d %d",&A,&B,&C);
+    printf("%d\n",(A+B)%C);
+    printf("%d\n",((A%C) + (B%C))%C);
+    printf("%d\n",(A*B)%C);
+    printf("%d",((A%C) * (B%C))%C);
+}
+//10
+#include<stdio.h>
+int main(void){
+    int a,b,fir,sec,thr;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    fir = b/100;
+    sec = b/10-(fir*10);
+    thr = b - (fir*100) - (sec*10);
+    printf("%d\n",a*thr);
+    printf("%d\n",a*sec);
+    printf("%d\n",a*fir);
+    printf("%d",a*b);
+}
+//11
+#include<stdio.h>
+int main(void){
+    long long int A,B,C;
+    scanf("%lld %lld %lld",&A,&B,&C);
+    printf("%lld\n",A+B+C);
+}
+//12
+#include<stdio.h>
+int main(void){
+    printf("\\    /\\\n");
+    printf(" )  ( ')\n");
+    printf("(  /  )\n");
+    printf(" \\(__)|\n");
+}
+//13
+#include<stdio.h>
+int main(void){
+    printf("|\\_/|\n");
+    printf("|q p|   /}\n");
+    printf("( 0 )\"\"\"\\\n");
+    printf("|\"^\"`    |\n");
+    printf("||_/=\\\\__|\n");
+}
