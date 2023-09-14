@@ -1,0 +1,141 @@
+//1
+#include<stdio.h>
+
+int main(void){
+    int num;
+    scanf("%d",&num);
+    for(int i=1;i<10;i++){
+        printf("%d * %d = %d\n",num,i,num*i);
+    }
+}
+//2
+#include<stdio.h>
+
+int main(void){
+    int loop,a,b;
+    scanf("%d",&loop);
+    for(int i=0;i<loop;i++){
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+    }
+}
+//3
+#include<stdio.h>
+
+int main(void){
+    int num,sum=0;
+    scanf("%d",&num);
+    for(int i=1;i<=num;i++){
+        sum=sum+i;
+    }
+    printf("%d",sum);
+}
+//4
+#include<stdio.h>
+
+int main(void){
+    int num,sum=0,loop,a,b;
+    scanf("%d",&num);
+    scanf("%d",&loop);
+    for(int i=0;i<loop;i++){
+        scanf("%d %d",&a,&b);
+        sum = sum + (a*b);
+    }
+    if(num == sum){
+        printf("Yes\n");
+    }
+    else printf("No\n");
+}
+//5
+#include<stdio.h>
+
+int main(void){
+    int longInt;
+    scanf("%d",&longInt);
+    for(int i=1;i<=(longInt/4);i++){
+        printf("long ");
+    }
+    printf("int");
+}
+//6
+#include<stdio.h>
+
+int main(void){
+    int t,a,b;
+    scanf("%d",&t);
+    for(int i=0;i<t;i++){
+        scanf("%d %d",&a,&b);
+        printf("%d\n",a+b);
+    }
+}
+//7
+#include<stdio.h>
+
+int main(void){
+    int t,a,b;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++){
+        scanf("%d %d",&a,&b);
+        printf("Case #%d: %d\n",i,a+b);
+    }
+}
+//8
+#include<stdio.h>
+
+int main(void){
+    int t,a,b;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++){
+        scanf("%d %d",&a,&b);
+        printf("Case #%d: %d + %d = %d\n",i,a,b,a+b);
+    }
+}
+//9
+#include<stdio.h>
+
+int main(void){
+    int loop;
+    scanf("%d",&loop);
+    for(int i=1;i<=loop;i++){
+        for(int j=1;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+//10
+#include<stdio.h>
+
+int main(void){
+    int loop;
+    scanf("%d",&loop);
+    for(int i=1;i<=loop;i++){
+        for(int k=loop-i;k>0;k--){
+            printf(" ");
+        }
+        for(int j=0;j<i;j++){
+                printf("*");
+        }
+        printf("\n");
+    }
+}
+//11
+#include<stdio.h>
+
+int main(void){
+    int a,b;
+    while(1){
+        scanf("%d %d",&a,&b);
+        if(a==0 && b==0) break;
+        printf("%d\n",a+b);
+    }
+}
+//12
+#include<stdio.h>
+
+int main(void){
+    int a,b;
+    while(scanf("%d %d",&a,&b) != -1){
+        printf("%d\n",a+b);
+    }
+}
