@@ -1,0 +1,48 @@
+//1
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+	int loop,choice,pcount=0;
+	int* px;
+	scanf("%d",&loop);
+	px = (int*)malloc(loop*sizeof(int));
+	for (int i=0;i<loop;i++) {
+		scanf("%d",&px[i]);
+	}
+	scanf("%d",&choice);
+	for (int j = 0; j < loop; j++) {
+		if (choice == px[j]) {
+			pcount++;
+		}
+	}
+	printf("%d",pcount);
+	free(px);
+}
+//2
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+	int loop,num,count=0;
+	int *px,*py;
+	scanf("%d",&loop);
+	scanf("%d",&num);
+	px = (int*)malloc(loop*sizeof(int));
+	py = (int*)malloc(loop*sizeof(int));
+	
+	for (int i=0;i<loop;i++) {
+		scanf("%d",&px[i]);
+		if (px[i] < num) {
+			py[count] = px[i];
+			count++;
+		}
+	}
+	for (int j=0;j<count;j++) {
+		printf("%d ",py[j]);
+	}
+	free(px);
+	free(py);
+}
