@@ -1,0 +1,87 @@
+//1
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+	int loop,choice,pcount=0;
+	int* px;
+	scanf("%d",&loop);
+	px = (int*)malloc(loop*sizeof(int));
+	for (int i=0;i<loop;i++) {
+		scanf("%d",&px[i]);
+	}
+	scanf("%d",&choice);
+	for (int j = 0; j < loop; j++) {
+		if (choice == px[j]) {
+			pcount++;
+		}
+	}
+	printf("%d",pcount);
+	free(px);
+}
+//2
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void)
+{
+	int loop,num,count=0;
+	int *px,*py;
+	scanf("%d",&loop);
+	scanf("%d",&num);
+	px = (int*)malloc(loop*sizeof(int));
+	py = (int*)malloc(loop*sizeof(int));
+	
+	for (int i=0;i<loop;i++) {
+		scanf("%d",&px[i]);
+		if (px[i] < num) {
+			py[count] = px[i];
+			count++;
+		}
+	}
+	for (int j=0;j<count;j++) {
+		printf("%d ",py[j]);
+	}
+	free(px);
+	free(py);
+}
+//3
+#include<stdio.h>
+#include<stdlib.h>
+#include <limits.h>
+
+int main(void)
+{
+	int loop,num,min=INT_MAX,max= INT_MIN;
+	int *px;
+	scanf("%d",&loop);
+	px = (int*)malloc(loop*sizeof(int));
+
+	for (int i = 0;i<loop;i++) {
+		scanf("%d",&num);
+		max = (num>max) ? num : max;
+		min = (num<min) ? num : min;
+	}
+	printf("%d %d",min,max);
+	free(px);
+}
+// free() 빼먹지 말기, <limits.h> 기억하기 // 이거 배열이 필요없는 코드였음 문제있음
+//4
+#include<stdio.h>
+#include <limits.h>
+
+int main(void)
+{
+	int num,max= INT_MIN,count=0;
+
+	for (int i = 1;i<=9;i++) {
+		scanf("%d",&num);
+		if (num>max) {
+			max = num;
+			count = i;
+		}
+	}
+	printf("%d %d",max,count);
+} 
+//이 코드도 배열을 사용 안함
