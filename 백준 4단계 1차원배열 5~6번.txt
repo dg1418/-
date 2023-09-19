@@ -1,0 +1,50 @@
+//5
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int n, m, i, j, k, loop, loop2, *px;
+	scanf("%d %d", &n, &m);
+	px= (int*)malloc(n * sizeof(int));
+
+	for (loop = 0; loop < n; loop++) {
+		px[loop] = 0;
+	}
+	for (loop = 0; loop < m; loop++) {
+		scanf("%d %d %d", &i, &j, &k);
+		for (loop2 = i - 1; loop2 < j; loop2++) {
+			px[loop2] = k;
+		}
+	}
+	for (loop=0; loop<n;loop++) {
+		printf("%d ",px[loop]);
+	}
+	
+	free(px);
+}
+//6
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int n, m, i, j, loop, *px, temp;
+	scanf("%d %d", &n, &m);
+	px= (int*)malloc(n * sizeof(int));
+	for (loop=0;loop<n;loop++) {
+		px[loop] = loop + 1;
+	}
+
+	for (loop = 0; loop < m; loop++) {
+		scanf("%d %d", &i, &j);
+		temp = px[i - 1];
+		px[i - 1] = px[j - 1];
+		px[j - 1] = temp;
+ 	}
+	for (loop=0; loop<n;loop++) {
+		printf("%d ",px[loop]);
+	}
+	
+	free(px);
+}
