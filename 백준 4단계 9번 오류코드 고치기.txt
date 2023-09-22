@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int n, m, *list, i, j, loop, temp, left, right,mid;
+    
+    // n과 m 값을 입력 받습니다.
+    scanf("%d %d", &n, &m);
+    
+    // 동적으로 n개의 정수 배열을 할당합니다.
+    list = (int*)malloc(n * sizeof(int));
+    
+    // 배열을 1부터 n까지 초기화합니다.
+    for (loop = 0; loop < n; loop++) {
+        list[loop] = loop + 1;
+    }
+    
+    // m번의 연산을 수행합니다.
+    for (loop = 0; loop < m; loop++) {
+        scanf("%d %d", &i, &j);
+        
+        // i와 j가 다를 때만 뒤집습니다.
+        if (i != j) {
+            left = i - 1;
+            right = j - 1;
+            mid = (left+right)/2;
+            if(mid<1) mid=1;
+            // 배열의 일부를 뒤집습니다.
+            for (int k = 0; k < mid; k++) {
+                temp = list[left];
+                list[left] = list[right];
+                list[right] = temp;
+                left++;
+                right--;
+            }
+        }
+    }
+    
+    // 배열을 출력합니다. 각 숫자를 개행하여 출력합니다.
+    for (loop = 0; loop < n; loop++) {
+        printf("%d ", list[loop]);
+    }
+    
+    // 메모리를 해제합니다.
+    free(list);
+    
+    return 0;
+}
+
