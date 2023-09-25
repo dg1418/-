@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int *list,n,m,i,j,temp;
+    scanf("%d %d",&n, &m);
+    
+    list = (int*)calloc(n,sizeof(int));
+    for(int k=0;k<n;k++){
+        list[k] = k+1;
+    }
+    for(int k=0;k<m;k++){
+        scanf("%d %d",&i,&j);
+        i--;
+        j--;
+        while(i<j){
+            temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    for(int k=0;k<n;k++){
+        printf("%d ",list[k]);
+    }
+    
+    free(list);
+    return 0;
+}
+
