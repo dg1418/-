@@ -1,0 +1,103 @@
+//1
+#include <stdio.h>
+
+int main(void)
+{
+    int num;
+    char word[1000];
+    
+    scanf("%s",word);
+    scanf("%d",&num);
+    
+    printf("%c",word[num-1]);
+    return 0;
+}
+//2
+#include <stdio.h>
+
+int main(void)
+{
+    int i=0;
+    char word[100];
+    
+    scanf("%s",word);
+    
+    while(word[i] != '\0'){
+        i++;
+    }
+    printf("%d",i);
+    return 0;
+}
+//3
+#include <stdio.h>
+
+int main(void)
+{
+    int t,j;
+    char word[1001];
+    scanf("%d",&t);
+    
+    for(int i=0;i<t;i++){
+        scanf("%s",word);
+        j=0;      //초기화 for문 안쪽으로 제대로 해주기 (틀린부분)
+        while(word[j] != '\0'){
+            j++;
+        }
+        printf("%c%c\n",word[0],word[j-1]);
+    }
+    return 0;
+}
+//4
+#include <stdio.h>
+
+int main(void)
+{
+    char ask;
+    scanf("%c",&ask);
+    printf("%d",ask);   //문자를 정수로 출력하면 아스키코드가 나온다
+    return 0;
+}
+//5
+#include <stdio.h>
+
+int main(void) {
+	int n,sum=0;
+	char word[101];
+
+	scanf("%d",&n);
+	scanf("%s", word);
+
+	for (int i=0;i<n;i++) {
+		sum += (word[i]-'0');
+	}
+
+	printf("%d",sum);
+}
+//6
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+int main(void) {
+    char word[101];
+    int count;
+    scanf("%s", word);
+
+    for (int i = 0;i<26;i++) {    //i는 알파벳 알파벳이 문장의 몇번방에 있어야는지 출력 해야함
+        count=0;
+        for (int j = 0;j<strlen(word);j++) {  // j는 문장의 단어의 방 번호
+            if (((int)word[j])==(97+i)) {
+                printf("%d ", j);
+                break;
+            }
+            else count++;
+            if (count==strlen(word)){
+                printf("-1 ");
+                break;
+              }
+        }
+        
+    }
+}
+
+
+
