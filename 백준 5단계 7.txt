@@ -1,0 +1,26 @@
+//7 //문제는 틀림 고치기
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    int wordNum,loop;
+    char word[1001];
+    scanf("%d",&wordNum);
+    
+    for(int i = 0;i<wordNum;i++){
+        char word2[1001];
+        int count=0;
+        scanf("%d",&loop);
+        scanf("%s",word);
+        
+        for(int j=0;j<strlen(word);j++){
+            for(int k=0;k<loop;k++){
+                word2[count] = word[j];
+                count++;
+            }
+        }
+        printf("%s\n",word2);
+    }
+        return 0;
+}
+
