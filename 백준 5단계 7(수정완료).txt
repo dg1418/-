@@ -1,0 +1,47 @@
+//7 //문제는 틀림 고치기
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    int wordNum,loop;
+    char word[1001];
+    scanf("%d",&wordNum);
+    
+    for(int i = 0;i<wordNum;i++){
+        char word2[1001];
+        int count=0;
+        scanf("%d",&loop);
+        scanf("%s",word);
+        
+        for(int j=0;j<strlen(word);j++){
+            for(int k=0;k<loop;k++){
+                word2[count] = word[j];
+                count++;
+            }
+        }
+        printf("%s\n",word2);
+    }
+        return 0;
+}
+//7 고쳐서 맞췄는데 개인적으로는 납득할수 없음 내 코드가 더 많은 리소스를 사용하지만 문제 자체는 맞지 않았나 생각이듬
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    int wordNum,loop;
+    char word[1001];
+    scanf("%d",&wordNum);
+    
+    for(int i = 0;i<wordNum;i++){
+        scanf("%d %s",&loop,word);
+        
+        for(int j=0;j<strlen(word);j++){
+            for(int k=0;k<loop;k++){
+                printf("%c",word[j]);
+            }
+        }
+        printf("\n");
+    }
+        return 0;
+}
+
